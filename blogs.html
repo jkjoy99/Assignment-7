@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div>
+            <h1>difference between Mape, filter, foreach, find</h1>
+            <p>The first difference between map() and forEach() is the returning value. The forEach() method returns
+                undefined and map() returns a new array with the transformed elements. Even if they do the same job, the
+                returning value remains different.</p>
+        </div>
+
+        <div>
+            <h1>difference between local storage and session storage cookies</h1>
+            <p>Local storage is the most recent mechanism. It allows for larger amounts (10MB) of data to be stored, but
+                the data is not deleted when the browser is closed. Session storage is similar to cookies, but the data
+                is only stored for the current session.</p>
+        </div>
+
+        <div>
+            <h1>what does event loop do?</h1>
+            <p>The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack
+                is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack,
+                which effectively runs it. Such an iteration is called a tick in the Event Loop.</p>
+        </div>
+
+        <div>
+            <h1>Explaining quizTimer function</h1>
+            <p>This is a JavaScript function named quizTimer that is responsible for running a countdown timer on a web
+                page.
+
+                Here is a breakdown of what the function does:
+
+                It takes a single parameter named dismiss, which is used to stop the timer if it is truthy.
+
+                If dismiss is truthy, the function clears an interval that is stored in a variable called timer. This
+                interval is responsible for updating the timer display on the web page every second. The clearInterval()
+                method cancels the interval and stops the timer.
+
+                If dismiss is falsy, the function sets up an interval that runs every second. The interval function
+                contains the code that updates the timer display on the web page.
+
+                Within the interval function, the function gets a reference to an HTML element with an ID of "count".
+                This element is used to display the countdown timer.
+
+                The function then calculates the minutes and seconds remaining in the countdown based on the value of a
+                variable called count. The count variable is incremented every second.
+
+                The minutes and seconds are formatted as a string in the format "mm:ss" using conditional statements to
+                add leading zeros where necessary.
+
+                The formatted string is then inserted into the "count" element using the innerHTML property.
+
+                If the count variable is greater than 60, the function alternates the color of the text in the "count"
+                element every second to create a visual effect.
+
+                The interval continues to run until the timer is dismissed by setting the dismiss parameter to a truthy
+                value, at which point the clearInterval() method stops the timer.</p>
+        </div>
+
+        <div>
+            <h1>Explaining ChoseQuize function</h1>
+            <p>The function takes two parameters, index and givenAns. The index parameter is the index of the current
+                question in the quiz and the givenAns parameter is the answer selected by the user for that question.
+
+                The function first checks whether the current question already exists in the answers array. The answers
+                array is an array of objects that stores the user's answers for each question.
+
+                To check whether the current question exists in the answers array, the function uses the find method to
+                search the answers array for an object that has the same id as the current question. The id is a
+                property of the objects in both the quizData and answers arrays, which helps to match the question and
+                its answer.
+
+                If the current question already exists in the answers array, the function updates the answer for that
+                question by iterating through the answers array using a for...of loop.
+
+                The loop iterates over each object in the answers array, comparing its id property to the id property of
+                the current question. When it finds a match, the function uses the splice method to replace the current
+                object in the answers array with a new object that has the same properties as the current question
+                object but with the givenAns property set to the givenAns parameter passed to the chooseQuiz function.
+                The splice method is used to update the object in place without changing the length of the answers
+                array.
+
+                If the current question does not already exist in the answers array, the function adds a new object to
+                the answers array using the push method. The new object has the same properties as the current question
+                object but with the givenAns property set to the givenAns parameter passed to the chooseQuiz function.
+
+                The function then calls another function named displayAnswers, passing in the answers array as an
+                argument. The displayAnswers function is responsible for updating the UI to show the user's answers for
+                each question in the quiz.</p>
+        </div>
+    </section>
+</body>
+
+</html>
